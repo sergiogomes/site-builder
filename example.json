@@ -1,0 +1,36 @@
+{
+  "name": "Curriculo",
+  "sections": [
+    {
+      "component": "main-nav",
+      "props": {
+        "title": "Curriculo",
+        "logo": {
+          "url": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+          "alt": "Logo do site"
+        }
+      }
+    },
+    {
+      "component": "hero",
+      "props": {
+        "title": "Olá, eu sou o João",
+        "image": {
+          "url": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+          "alt": "Imagem de um homem sorrindo"
+        },
+        "cta": {
+          "text": "Entrar em contato",
+          "href": "",
+          "anchor": "#contact"
+        }
+      }
+    },
+    {
+      "component": "info",
+      "props": {
+        "richtext": "<div><h2>Quem sou eu?</h2><p>Eu sou um desenvolvedor fullstack com 5 anos de experiência em desenvolvimento web.</p><a target=\"_blank\" href=\"https://www.google.com\">Portifolio</a></div>"
+      }
+    }
+  ]
+}
