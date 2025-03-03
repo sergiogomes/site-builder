@@ -1,6 +1,9 @@
 export type linkProps = {
-  href: string
   text: string
-  anchor: string
-  target: string
-}
+  target?: string
+  href?: string
+  anchor?: string
+} & (
+  | { href: string; anchor?: string }
+  | { href?: string; anchor: string }
+)
