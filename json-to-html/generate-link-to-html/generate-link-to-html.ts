@@ -1,9 +1,9 @@
-import { type linkProps } from '../../types/link'
+import { type LinkProps } from '../../types/link'
 
-export type generateLinkToHtmlProps = {
-  link: linkProps
+export type GenerateLinkToHtmlProps = {
+  link: LinkProps
 }
-export function generateLinkToHtml({ link }: generateLinkToHtmlProps): string {
+export function generateLinkToHtml({ link }: GenerateLinkToHtmlProps): string {
   const { href, text, target, anchor } = link
 
   if (!text) return ''

@@ -1,4 +1,4 @@
-export type linkProps = {
+export type LinkProps = {
   text: string
   target?: string
   href?: string

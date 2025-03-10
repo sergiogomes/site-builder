@@ -1,19 +1,19 @@
 import { generateLinkToHtml } from '../generate-link-to-html/generate-link-to-html'
 import { generateImageToHtml } from '../generate-image-to-html/generate-image-to-html'
 
-import { type imageProps } from '../../types/image'
-import { type linkProps } from '../../types/link'
+import { type ImageProps } from '../../types/image'
+import { type LinkProps } from '../../types/link'
 
-type generateHeroToHtmlProps = {
+export type GenerateHeroToHtmlProps = {
   title?: string
-  image?: imageProps
-  cta?: linkProps
+  image?: ImageProps
+  cta?: LinkProps
 } & (
   | { title: string }
-  | { image: imageProps }
-  | { cta: linkProps }
+  | { image: ImageProps }
+  | { cta: LinkProps }
 )
-export function generateHeroToHtml(props: generateHeroToHtmlProps): string {
+export function generateHeroToHtml(props: GenerateHeroToHtmlProps): string {
   const { title, image, cta } = props
 
   const html: string[] = []

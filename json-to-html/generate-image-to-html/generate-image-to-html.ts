@@ -1,9 +1,9 @@
-import { imageProps } from '../../types/image'
+import { ImageProps } from '../../types/image'
 
-export type generateImageToHtmlProps = {
-  image: imageProps
+export type GenerateImageToHtmlProps = {
+  image: ImageProps
 }
-export function generateImageToHtml({ image }: generateImageToHtmlProps): string {
+export function generateImageToHtml({ image }: GenerateImageToHtmlProps): string {
   const { src, alt } = image
 
   if (!src || !alt) return ''

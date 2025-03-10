@@ -1,10 +1,10 @@
 import { generateLinkToHtml } from './generate-link-to-html'
 
-import { type generateLinkToHtmlProps } from './generate-link-to-html'
+import { type GenerateLinkToHtmlProps } from './generate-link-to-html'
 
 describe('generateLinkToHtml', () => {
   it('should return an empty string if text is not provided', () => {
-    const props: generateLinkToHtmlProps = {
+    const props: GenerateLinkToHtmlProps = {
       link: {
         href: 'https://example.com',
         text: '',
@@ -17,7 +17,7 @@ describe('generateLinkToHtml', () => {
   })
 
   it('should return an empty string if neither href nor anchor is provided', () => {
-    const props: generateLinkToHtmlProps = {
+    const props: GenerateLinkToHtmlProps = {
       link: {
         href: '',
         text: 'Example',
@@ -30,7 +30,7 @@ describe('generateLinkToHtml', () => {
   })
 
   it('should generate a link with href and text', () => {
-    const props: generateLinkToHtmlProps = {
+    const props: GenerateLinkToHtmlProps = {
       link: {
         href: 'https://example.com',
         text: 'Example',
@@ -43,7 +43,7 @@ describe('generateLinkToHtml', () => {
   })
 
   it('should generate a link with target attribute', () => {
-    const props: generateLinkToHtmlProps = {
+    const props: GenerateLinkToHtmlProps = {
       link: {
         href: 'https://example.com',
         text: 'Example',
@@ -56,7 +56,7 @@ describe('generateLinkToHtml', () => {
   })
 
   it('should generate a link with anchor', () => {
-    const props: generateLinkToHtmlProps = {
+    const props: GenerateLinkToHtmlProps = {
       link: {
         href: 'https://example.com',
         text: 'Example',
@@ -69,7 +69,7 @@ describe('generateLinkToHtml', () => {
   })
 
   it('should generate a link with href, text, target, and anchor', () => {
-    const props: generateLinkToHtmlProps = {
+    const props: GenerateLinkToHtmlProps = {
       link: {
         href: 'https://example.com',
         text: 'Example',

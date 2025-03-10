@@ -1,4 +1,4 @@
-export type imageProps = {
+export type ImageProps = {
   src: string
   alt: string
 }
