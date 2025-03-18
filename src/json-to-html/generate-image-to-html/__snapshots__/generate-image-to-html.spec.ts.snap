@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateImageToHtml should generate correct HTML for valid image props 1`] = `"<img src="image.jpg" alt="An image" />"`;
+
+exports[`generateImageToHtml should return an empty string if alt is missing 1`] = `""`;
+
+exports[`generateImageToHtml should return an empty string if both src and alt are missing 1`] = `""`;
+
+exports[`generateImageToHtml should return an empty string if src is missing 1`] = `""`;

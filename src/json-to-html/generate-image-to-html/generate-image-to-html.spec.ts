@@ -10,7 +10,7 @@ describe('generateImageToHtml', () => {
     const props: GenerateImageToHtmlProps = { image }
     const result = generateImageToHtml(props)
     
-    expect(result).toBe('<img src="image.jpg" alt="An image" />')
+    expect(result).toMatchSnapshot()
   })
 
   it('should return an empty string if src is missing', () => {
@@ -18,7 +18,7 @@ describe('generateImageToHtml', () => {
     const props: GenerateImageToHtmlProps = { image }
     const result = generateImageToHtml(props)
     
-    expect(result).toBe('')
+    expect(result).toMatchSnapshot()
   })
 
   it('should return an empty string if alt is missing', () => {
@@ -26,7 +26,7 @@ describe('generateImageToHtml', () => {
     const props: GenerateImageToHtmlProps = { image }
     const result = generateImageToHtml(props)
     
-    expect(result).toBe('')
+    expect(result).toMatchSnapshot()
   })
 
   it('should return an empty string if both src and alt are missing', () => {
@@ -34,6 +34,6 @@ describe('generateImageToHtml', () => {
     const props: GenerateImageToHtmlProps = { image }
     const result = generateImageToHtml(props)
     
-    expect(result).toBe('')
+    expect(result).toMatchSnapshot()
   })
 })

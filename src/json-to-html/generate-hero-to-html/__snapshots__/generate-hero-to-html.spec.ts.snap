@@ -1,20 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`generateHeroToHtml should generate HTML with cta only 1`] = `"<div class="hero"><div class="container"><a href="https://example.com">Click here</a></div></div>"`;
-
-exports[`generateHeroToHtml should generate HTML with image only 1`] = `"<div class="hero" style="background-image: url('image.jpg');"><div class="container"></div></div>"`;
-
-exports[`generateHeroToHtml should generate HTML with title only 1`] = `"<div class="hero"><div class="container"><h2>Hero Title</h2></div></div>"`;
-
-exports[`generateHeroToHtml should generate HTML with title, image, and cta 1`] = `"<div class="hero" style="background-image: url('image.jpg');"><div class="container"><h2>Hero Title</h2><a href="https://example.com">Click here</a></div></div>"`;
-
-exports[`generateHeroToHtml should test scss 1`] = `
+exports[`generateHeroToHtml should compile Hero SCSS to CSS 1`] = `
 ".hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   height: 100dvh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero .container {
   margin: auto;
@@ -53,3 +48,11 @@ exports[`generateHeroToHtml should test scss 1`] = `
   font-size: 1.5rem;
 }"
 `;
+
+exports[`generateHeroToHtml should generate HTML with cta only 1`] = `"<div class="hero"><div class="container"><a href="https://example.com">Click here</a></div></div>"`;
+
+exports[`generateHeroToHtml should generate HTML with image only 1`] = `"<div class="hero" style="background-image: url('image.jpg');"><div class="container"></div></div>"`;
+
+exports[`generateHeroToHtml should generate HTML with title only 1`] = `"<div class="hero"><div class="container"><h2>Hero Title</h2></div></div>"`;
+
+exports[`generateHeroToHtml should generate HTML with title, image, and cta 1`] = `"<div class="hero" style="background-image: url('image.jpg');"><div class="container"><h2>Hero Title</h2><a href="https://example.com">Click here</a></div></div>"`;

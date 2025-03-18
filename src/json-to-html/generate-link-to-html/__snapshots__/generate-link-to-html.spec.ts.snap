@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateLinkToHtml should generate a link with anchor 1`] = `"<a href="https://example.com#section">Example</a>"`;
+
+exports[`generateLinkToHtml should generate a link with href and text 1`] = `"<a href="https://example.com">Example</a>"`;
+
+exports[`generateLinkToHtml should generate a link with href, text, target, and anchor 1`] = `"<a target="_blank" href="https://example.com#section">Example</a>"`;
+
+exports[`generateLinkToHtml should generate a link with target attribute 1`] = `"<a target="_blank" href="https://example.com">Example</a>"`;
+
+exports[`generateLinkToHtml should return an empty string if neither href nor anchor is provided 1`] = `""`;
+
+exports[`generateLinkToHtml should return an empty string if text is not provided 1`] = `""`;

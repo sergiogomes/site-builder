@@ -2,8 +2,8 @@ import { compile } from 'sass-embedded'
 
 import { generateHeroToHtml } from './generate-hero-to-html'
 
-import { type ImageProps } from '../../../types/image'
-import { type LinkProps } from '../../../types/link'
+import { type ImageProps } from '../../types/image'
+import { type LinkProps } from '../../types/link'
 
 
 describe('generateHeroToHtml', () => {
@@ -39,7 +39,7 @@ describe('generateHeroToHtml', () => {
     expect(result).toMatchSnapshot()
   })
 
-  it('should test scss', () => {
+  it('should compile Hero SCSS to CSS', () => {
     const result = compile(__dirname + '/generate-hero-to-css.scss')
 
     expect(result.css).toMatchSnapshot()

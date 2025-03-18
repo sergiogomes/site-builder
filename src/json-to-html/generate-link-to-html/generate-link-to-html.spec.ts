@@ -13,7 +13,7 @@ describe('generateLinkToHtml', () => {
       }
     }
 
-    expect(generateLinkToHtml(props)).toBe('')
+    expect(generateLinkToHtml(props)).toMatchSnapshot()
   })
 
   it('should return an empty string if neither href nor anchor is provided', () => {
@@ -26,7 +26,7 @@ describe('generateLinkToHtml', () => {
       }
     }
 
-    expect(generateLinkToHtml(props)).toBe('')
+    expect(generateLinkToHtml(props)).toMatchSnapshot()
   })
 
   it('should generate a link with href and text', () => {
@@ -39,7 +39,7 @@ describe('generateLinkToHtml', () => {
       }
     }
 
-    expect(generateLinkToHtml(props)).toBe('<a href="https://example.com">Example</a>')
+    expect(generateLinkToHtml(props)).toMatchSnapshot()
   })
 
   it('should generate a link with target attribute', () => {
@@ -52,7 +52,7 @@ describe('generateLinkToHtml', () => {
       }
     }
 
-    expect(generateLinkToHtml(props)).toBe('<a target="_blank" href="https://example.com">Example</a>')
+    expect(generateLinkToHtml(props)).toMatchSnapshot()
   })
 
   it('should generate a link with anchor', () => {
@@ -65,7 +65,7 @@ describe('generateLinkToHtml', () => {
       }
     }
 
-    expect(generateLinkToHtml(props)).toBe('<a href="https://example.com#section">Example</a>')
+    expect(generateLinkToHtml(props)).toMatchSnapshot()
   })
 
   it('should generate a link with href, text, target, and anchor', () => {
@@ -78,6 +78,6 @@ describe('generateLinkToHtml', () => {
       }
     }
 
-    expect(generateLinkToHtml(props)).toBe('<a target="_blank" href="https://example.com#section">Example</a>')
+    expect(generateLinkToHtml(props)).toMatchSnapshot()
   })
 })
