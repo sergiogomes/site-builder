@@ -6,7 +6,7 @@
       "props": {
         "title": "Curriculo",
         "logo": {
-          "url": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+          "src": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
           "alt": "Logo do site"
         }
       }
@@ -16,7 +16,7 @@
       "props": {
         "title": "Olá, eu sou o João",
         "image": {
-          "url": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+          "src": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
           "alt": "Imagem de um homem sorrindo"
         },
         "cta": {

@@ -1,14 +1,17 @@
+import { compile } from 'sass-embedded'
+
 import { generateHeroToHtml } from './generate-hero-to-html'
 
-import { type ImageProps } from '../../types/image'
-import { type LinkProps } from '../../types/link'
+import { type ImageProps } from '../../../types/image'
+import { type LinkProps } from '../../../types/link'
+
 
 describe('generateHeroToHtml', () => {
   it('should generate HTML with title only', () => {
     const props = { title: 'Hero Title' }
     const result = generateHeroToHtml(props)
     
-    expect(result).toBe('<div class="hero"><h2>Hero Title</h2></div>')
+    expect(result).toMatchSnapshot()
   })
 
   it('should generate HTML with image only', () => {
@@ -16,7 +19,7 @@ describe('generateHeroToHtml', () => {
     const props = { image }
     const result = generateHeroToHtml(props)
     
-    expect(result).toBe('<div class="hero"><img src="image.jpg" alt="An image" /></div>')
+    expect(result).toMatchSnapshot()
   })
 
   it('should generate HTML with cta only', () => {
@@ -24,7 +27,7 @@ describe('generateHeroToHtml', () => {
     const props = { cta }
     const result = generateHeroToHtml(props)
     
-    expect(result).toBe('<div class="hero"><a href="https://example.com">Click here</a></div>')
+    expect(result).toMatchSnapshot()
   })
 
   it('should generate HTML with title, image, and cta', () => {
@@ -33,6 +36,12 @@ describe('generateHeroToHtml', () => {
     const props = { title: 'Hero Title', image, cta }
     const result = generateHeroToHtml(props)
     
-    expect(result).toBe('<div class="hero"><h2>Hero Title</h2><img src="image.jpg" alt="An image" /><a href="https://example.com">Click here</a></div>')
+    expect(result).toMatchSnapshot()
+  })
+
+  it('should test scss', () => {
+    const result = compile(__dirname + '/generate-hero-to-css.scss')
+
+    expect(result.css).toMatchSnapshot()
   })
 })

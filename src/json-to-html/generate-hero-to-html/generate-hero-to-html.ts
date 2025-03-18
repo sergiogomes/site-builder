@@ -1,5 +1,5 @@
 import { generateLinkToHtml } from '../generate-link-to-html/generate-link-to-html'
-import { generateImageToHtml } from '../generate-image-to-html/generate-image-to-html'
+import './generate-hero-to-css.scss'
 
 import { type ImageProps } from '../../types/image'
 import { type LinkProps } from '../../types/link'
@@ -19,15 +19,17 @@ export function generateHeroToHtml(props: GenerateHeroToHtmlProps): string {
   const html: string[] = []
 
   const titleHtml = title ? `<h2>${title}</h2>` : ''
-  const imageHtml = image ? generateImageToHtml({ image }) : ''
   const ctaHtml = cta ? generateLinkToHtml({ link: cta }) : ''
 
-  if (titleHtml || imageHtml || ctaHtml) {
-    html.push('<div class="hero">')
+  if (titleHtml || image?.src || ctaHtml) {
+    if (image?.src) {
+      html.push(`<div class="hero" style="background-image: url('${image.src}');"><div class="container">`)
+    } else {
+      html.push('<div class="hero"><div class="container">')
+    }
     html.push(titleHtml)
-    html.push(imageHtml)
     html.push(ctaHtml)
-    html.push('</div>')
+    html.push('</div></div>')
   }
 
   return html.join('')

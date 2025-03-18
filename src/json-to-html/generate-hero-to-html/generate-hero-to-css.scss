@@ -1,0 +1,47 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 100dvh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333a3;
+    border-radius: 8px;
+    padding: 20px;
+    
+    @media (min-width: 768px) {
+      gap: 20px;
+      padding: 80px;
+    }
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    
+    @media (min-width: 768px) {
+      font-size: 5rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: auto;
+    font-size: 1.5rem;
+  }
+}

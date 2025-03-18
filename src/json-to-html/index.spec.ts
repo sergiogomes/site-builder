@@ -26,17 +26,6 @@ describe('jsonToHtml', () => {
 } }
     const result = jsonToHtml(props)
     
-    expect(result).toBe(
-      `<DOCTYPE html>
-    <html>
-      <head>
-      </head>
-      <body>
-        <div id="root">
-          <div class="hero"><h2>Olá, eu sou o João</h2><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Imagem de um homem sorrindo" /><a href="#contact">Entrar em contato</a></div>
-        </div>
-      </body>
-    </html>`
-    )
+    expect(result).toMatchSnapshot()
   })
 })

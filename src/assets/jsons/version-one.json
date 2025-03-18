@@ -1,0 +1,20 @@
+{
+  "name": "Curriculo",
+  "sections": [
+    {
+      "component": "hero",
+      "props": {
+        "title": "Olá, eu sou o Sérgio Gomes",
+        "image": {
+          "src": "https://www.oaklins.com/api/deal-hero-image/108887/deal-hero-image.jpg",
+          "alt": "Placas de circuito impresso"
+        },
+        "cta": {
+          "text": "Entrar em contato",
+          "href": "",
+          "anchor": "#contact"
+        }
+      }
+    }
+  ]
+}
