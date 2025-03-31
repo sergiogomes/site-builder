@@ -24,8 +24,15 @@ function Link({ isSubComponent, onChange }: LinkFormProps) {
   )
 }
 
+const initialLinkObj: LinkProps = {
+  text: '',
+  href: '',
+  anchor: '',
+  target: '',
+}
+
 function LinkContent({ isSubComponent, onChange }: LinkFormProps) {
-  const [linkObj, setLinkObj] = useState<LinkProps>({} as LinkProps)
+  const [linkObj, setLinkObj] = useState<LinkProps>(initialLinkObj as LinkProps)
 
   const handleChange = (inputName: string, value: string) => {
     setLinkObj((prev) => ({ ...prev, [inputName]: value }))
@@ -35,7 +42,7 @@ function LinkContent({ isSubComponent, onChange }: LinkFormProps) {
   }
 
   return (
-    <div>
+    <>
       <div className="form-field">
         <label htmlFor="link-text">Link Text</label>
         <input
@@ -88,7 +95,7 @@ function LinkContent({ isSubComponent, onChange }: LinkFormProps) {
           Salvar
         </button>
       )}
-    </div>
+    </>
   )
 }
 

@@ -1,12 +1,20 @@
 import { useState } from 'react'
 
 import { type HeroProps } from '../../types/hero'
+import { type ImageProps } from '../../types/image'
+import { type LinkProps } from '../../types/link'
 
 import Image from '../image/image'
 import Link from '../link/link'
 
+const initialHeroObj: HeroProps = {
+  title: '',
+  image: {} as ImageProps,
+  cta: {} as LinkProps,
+}
+
 function Hero() {
-  const [heroObj, setHeroObj] = useState<HeroProps>({} as HeroProps)
+  const [heroObj, setHeroObj] = useState<HeroProps>(initialHeroObj as HeroProps)
 
   const handleSubComponentChange = (objectName: string, inputName: string, value: string) => {
     setHeroObj((prev) => ({
@@ -19,7 +27,10 @@ function Hero() {
   }
 
   return (
-    <form>
+    <form onSubmit={(e) => {
+      e.preventDefault()
+      console.log('*** Hero Object:', heroObj)
+    }}>
       <div>
         <div className="form-field">
           <label htmlFor="hero-title">Hero Title</label>
@@ -33,14 +44,9 @@ function Hero() {
         </div>
 
         <Image isSubComponent={true} onChange={(inputName, value) => handleSubComponentChange('image', inputName, value)} />
-        <Link isSubComponent={true} onChange={(inputName, value) => handleSubComponentChange('link', inputName, value)} />
+        <Link isSubComponent={true} onChange={(inputName, value) => handleSubComponentChange('cta', inputName, value)} />
 
-        <button
-          type="submit"
-          onClick={() => console.log('Hero Object:', heroObj)}
-        >
-          Salvar
-        </button>
+        <button type="submit">Salvar</button>
 
       </div>
     </form>
