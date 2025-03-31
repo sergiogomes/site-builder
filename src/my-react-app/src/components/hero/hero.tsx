@@ -7,6 +7,8 @@ import { type LinkProps } from '../../types/link'
 import Image from '../image/image'
 import Link from '../link/link'
 
+import { jsonToHtml } from '../../../../json-to-html/index'
+
 const initialHeroObj: HeroProps = {
   title: '',
   image: {} as ImageProps,
@@ -30,6 +32,15 @@ function Hero() {
     <form onSubmit={(e) => {
       e.preventDefault()
       console.log('*** Hero Object:', heroObj)
+      const obj = {
+        json: {
+          name: 'string',
+          sections: [
+            { component: 'hero', props: heroObj },
+          ]
+        }
+      }
+      console.log('*** print', jsonToHtml(obj))
     }}>
       <div>
         <div className="form-field">
