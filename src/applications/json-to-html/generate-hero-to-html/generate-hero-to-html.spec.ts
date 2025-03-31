@@ -2,8 +2,8 @@ import { compile } from 'sass-embedded'
 
 import { generateHeroToHtml } from './generate-hero-to-html'
 
-import { type ImageProps } from '../../types/image'
-import { type LinkProps } from '../../types/link'
+import { type ImageProps } from '../../../entities/image'
+import { type LinkProps } from '../../../entities/link'
 
 
 describe('generateHeroToHtml', () => {

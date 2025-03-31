@@ -1,8 +1,8 @@
 import { generateLinkToHtml } from '../generate-link-to-html/generate-link-to-html'
 import './generate-hero-to-css.scss'
 
-import { type ImageProps } from '../../types/image'
-import { type LinkProps } from '../../types/link'
+import { type ImageProps } from '../../../entities/image'
+import { type LinkProps } from '../../../entities/link'
 
 export type GenerateHeroToHtmlProps = {
   title?: string

@@ -1,4 +1,4 @@
-import { ImageProps } from '../../types/image'
+import { ImageProps } from '../../../entities/image'
 
 export type GenerateImageToHtmlProps = {
   image: ImageProps

@@ -44,3 +44,6 @@ Receives an ID to do steps:
 - Fetch JSON from DB
 - Call JSON to HTML
 - Generate static HTML
+
+
+import types de fora

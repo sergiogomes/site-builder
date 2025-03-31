@@ -1,4 +1,4 @@
-import { type LinkProps } from '../../types/link'
+import { type LinkProps } from '../../../entities/link'
 
 export type GenerateLinkToHtmlProps = {
   link: LinkProps
