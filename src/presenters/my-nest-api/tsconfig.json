@@ -16,6 +16,13 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@json-to-html/*": ["../../applications/json-to-html/*"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "../../applications/json-to-html/**/*",
+  ]
 }

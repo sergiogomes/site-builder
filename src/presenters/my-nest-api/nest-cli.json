@@ -4,5 +4,6 @@
   "sourceRoot": "src",
   "compilerOptions": {
     "deleteOutDir": true
-  }
+  },
+  "entryFile": "presenters/my-nest-api/src/main.js"
 }
