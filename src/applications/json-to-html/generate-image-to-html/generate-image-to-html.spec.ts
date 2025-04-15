@@ -2,7 +2,7 @@
 import { generateImageToHtml } from "./generate-image-to-html"
 
 import { type GenerateImageToHtmlProps } from "./generate-image-to-html"
-import { type ImageProps } from "../../types/image"
+import { type ImageProps } from "../../../entities/image"
 
 describe('generateImageToHtml', () => {
   it('should generate correct HTML for valid image props', () => {

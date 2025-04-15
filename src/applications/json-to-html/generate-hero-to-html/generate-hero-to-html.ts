@@ -1,5 +1,5 @@
 import { generateLinkToHtml } from '../generate-link-to-html/generate-link-to-html'
-import './generate-hero-to-css.scss'
+// import './generate-hero-to-css.scss'
 
 import { type ImageProps } from '../../../entities/image'
 import { type LinkProps } from '../../../entities/link'
